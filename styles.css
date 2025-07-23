@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flex-item {
+  flex: 1 1 300px;
+  max-width: 100%;
+}
+
+/**Fonts Styles*/
+.subtext {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.font-black {
+  color: black;
+}
+
+.font-gray {
+  color: #8b8b8b;
+}
+
+.font-info {
+  font-size: 10px;
+}
+
+.summary-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-wrap: break-word; /* ensure long text wraps */
+  word-break: break-word;
+}
+
+.header-icon {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.main-icon {
+  width: 2rem;
+  height: auto;
+}
+
+.back-icon {
+  width: 0.8rem;
+  height: auto;
+}
+
+.pick-icon {
+  width: 1.2rem;
+}
+
+a.back-arrow {
+  text-decoration: none !important;
+}
+
+span.back-text {
+  color: #6b6b6b;
+}
+
+.custom-divider {
+  height: 1.1rem;
+}
+
+.description {
+  padding-top: 1rem;
+}
+
+.other-des {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.van,
+.date {
+  padding-right: 2rem;
+  width: 50%;
+}
+
+/* ensure inner sections don't overflow their flex parent */
+.van,
+.date {
+  flex: 1 1 45%;
+  min-width: 200px;
+}
+
+.esti-price {
+  background-color: #f6ffd9;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+}
+
+.esti {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.esti-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.confirm-btn {
+  background-color: #a5ca1b;
+  border: 1px solid #a5ca1b;
+  width: 130px;
+  border-radius: 20px;
+}
+.edit-btn {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 100px;
+  background-color: #ffffff;
+}
+
+.custom-btn:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Mobile Responsive*/
+@media (max-width: 530px) {
+  .other-des {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .header-icon,
+  .pick-up,
+  .other-des,
+  .subtext {
+    width: 100%;
+  }
+
+  .pick-up .van {
+    width: 100%;
+  }
+
+  .van,
+  .date {
+    width: 100%;
+  }
+
+  .esti {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .confirm-btn,
+  .edit-btn {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 270px) {
+  .other-des {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .van,
+  .date {
+    width: 100%;
+  }
+
+  .main-icon {
+    width: 1rem;
+    height: auto;
+  }
+
+  .header-icon {
+    display: flex;
+    width: 100%;
+    padding-right: 0.5rem;
+  }
+
+  h2.headline-main {
+    font-size: 18px;
+  }
+
+  .subtext {
+    font-size: 13px;
+  }
+
+  .custom-divider,
+  .custom-divider2,
+  .custom-divider3,
+  .pick-up,
+  .other-des,
+  .description {
+    width: 100%;
+  }
+
+  span.back-text {
+    font-size: 13px;
+  }
+
+  .back-icon {
+    width: 0.6rem;
+    height: auto;
+  }
+
+  .esti {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .esti-price {
+    padding: 2rem 1.1rem;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .esti-text {
+    font-size: 14px;
+  }
+
+  p.description.font-gray {
+    font-size: 12px;
+  }
+
+  p.description.font-gray.font-info {
+    font-size: 10px;
+  }
+
+  p.description.font-gray.sub-cat {
+    padding-right: 3rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .confirm-btn,
+  .edit-btn {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+}
